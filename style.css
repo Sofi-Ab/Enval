@@ -5,13 +5,13 @@ ul li{
    border-radius: 7px;
 }
 ul li:hover{
-    background-color: #84c2ce;
+    background-color:rgb(198, 238, 242);
 }
 .act{
-    background-color: #84c2ce;
+    background-color: rgb(198, 238, 242);
 }
 #btn{
-background-color: #4A96A6;
+background-color:rgb(79, 162, 170);
 border: none;
 
 }
