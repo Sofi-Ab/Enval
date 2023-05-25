@@ -1,0 +1,28 @@
+
+ul li{
+   padding: 10px; 
+   margin-bottom: 5px;
+   border-radius: 7px;
+}
+ul li:hover{
+    background-color: #84c2ce;
+}
+.act{
+    background-color: #84c2ce;
+}
+#btn{
+background-color: #4A96A6;
+border: none;
+
+}
+.facture{
+    margin-right: 1rem;
+}
+td{
+    border: solid black 1px ;
+    border-right: none;
+   border-bottom: none;
+}
+.bordergauche{
+    border-left: none;
+}

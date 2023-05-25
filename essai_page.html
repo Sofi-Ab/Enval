@@ -1,0 +1,165 @@
+
+<body>
+    <!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started with Chart JS with www.chartjs3.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+       
+      }
+      #myChart{
+        border-radius: 20px;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: rgba(62, 133, 181, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 40%;
+        padding: 20px;
+        border-radius: 20px;
+        background: rgb(108, 155, 220);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col ">
+          <div class="card" style="width: 18rem;">
+            
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          Column
+          <h1 class="fw-bold">Je suis John Doe Développeur et Designer Web</h1>
+<h2 class="fw-light">Bienvenue dans mon univers créatif</h2>
+        </div>
+        <div class="col .opacity-0-hover:hover { opacity: 0 !important; }
+        " >
+          Column
+        </div>
+      </div>
+    </div>
+    
+    <div class="chartMenu">
+      <p>WWW.CHARTJS3.COM (Chart JS <span id="chartVersion"></span>)</p>
+    </div>
+    <div class="chartCard">
+      <div class="chartBox">
+        <canvas id="myChart" style="border-radius: 12px ;"></canvas>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+    // setup 
+    const data = {
+      labels: ['Mon'],
+      datasets: [{
+        label: 'Weekly Sales',
+        data: [18, 12],
+        backgroundColor: [
+        'rgb(252, 252, 252)',  
+          'rgba(0, 0, 0, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255, 26, 104, 1)',
+         
+          'rgba(0, 0, 0, 1)'
+        ],
+        borderWidth: 1
+      }]
+    };
+
+    // config 
+    const config = {
+      type: 'doughnut',
+      data,
+      
+      options: {
+        circumference: 280,
+        rotation: 220,
+        cutout:'90%',
+        aspectRation: 2,
+        plugins: {
+            legend: {
+                display: false
+            },
+            tooltip: {
+                filter: (tooltipItem) => {
+                    console.log(tooltipItem)
+                    return tooltipItem.dataIndex === 0;
+                }
+            }
+        }
+        }
+      }
+    
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+
+
+<nav class="navbar navbar-light bg-white" style="width: 25%;">
+  <div class="container ">
+    <a class="navbar-brand" href="#">
+      <i class="bi bi-search alt=" width="30" height="24" style="margin-right: 2;"></i> 
+    </a>
+  </div>
+</nav>
+<div class="input-group mb-3">
+  <input type="text" class="form-control">
+  <span class="input-group-text" id="basic-addon2"> <i class="bi bi-search alt=" width="30" height="24" style="margin-left: 100%;"></i> </span>
+</div>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+  </body>
+</html>
